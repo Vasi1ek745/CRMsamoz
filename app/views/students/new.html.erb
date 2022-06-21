@@ -7,7 +7,7 @@
 
 		<div class="input-group mb-3">
 		  <span class="input-group-text px-4" id="basic-addon1">Name</span>
-		  <input type="text" class="form-control" placeholder="Name" >
+		  <%= form.text_field :name ,class: "form-control", placeholder:"Name" %>
 		</div>
 		<div class="container ms-0"> 
 			<div class="row">
@@ -17,23 +17,23 @@
 		  		</div>
 				<div class="input-group mb-2 "style="width: 25%;">
 				  <span class="input-group-text px-4" id="basic-addon2">Class in school</span>
-					<%= form.select :subject, (6..11).to_a , {} , class:"form-select" %>
+					<%= form.select :class_in_school, (6..11).to_a , {} , class:"form-select" %>
 				</div>
 			</div>
 			<div class="row"> 
 				<div class="input-group mb-2 p-0" style="width: 25%;">
 				  <span class="input-group-text px-4" id="basic-addon2">Location</span>
-					<%= form.select :subject, ["Online", "Home"], {} , class:"form-select" %>
+					<%= form.select :location, ["Online", "Home"], {} , class:"form-select" %>
 				</div>
 				<div class="input-group mb-2 " style="width: 25%;">
 				  <span class="input-group-text mx-4" id="basic-addon2">Pay_by_hour</span>
-				 <%= form.select :subject, [600,700,800,900,1000] , {} , class:"form-select" %>
+				 <%= form.select :pay_by_hour, [600,700,800,900,1000] , {} , class:"form-select" %>
 				</div>
 			</div>
 		</div>
 		<div class="input-group mb-3">
 				  <span class="input-group-text" id="basic-addon2">Other</span>
-				  <input type="text" class="form-control" >
+				  <%= form.text_field :other ,class: "form-control", placeholder:"Other" %>
 		</div>
 	</div>
 		<div class="mx-2  ">

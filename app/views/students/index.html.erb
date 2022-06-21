@@ -18,8 +18,8 @@
 		<div class="border border-2 shadow-2 m-2 p-2">
 			<div class="m-2 p-2">
 				
-			<h3 class="mb-3"> Name : <%= student.name %></h3>
-			<p> Subject :<%= student.subject %></p>
+			<h3 class="mb-3"> <%= student.name %></h3>
+			<p> <%= student.subject %></p>
 			
 
 			</div>
@@ -27,7 +27,7 @@
 				<p>
 					<%= link_to 'Show', student_path(student.id) , class: "btn btn-outline-primary btn-sm" %>
 					<%= link_to 'Edit', edit_student_path(student.id), class: "btn btn-outline-secondary btn-sm" %>
-					<%= link_to 'Delete', student_path(student.id), class: "btn btn-outline-dark btn-sm", method: :delete %>
+					<%= link_to 'Delete', student_path(student.id), class: "btn btn-outline-dark btn-sm", method: :delete , data: { confirm: "are you shure?"} %>
 				</p>
 			</div>
 			
