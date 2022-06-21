@@ -1,4 +1,10 @@
 class LessonsController < ApplicationController
+  def all
+    @lessons = Lesson.all
+
+  end
+
+
   def index
   end
 

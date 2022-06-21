@@ -6,4 +6,6 @@ Rails.application.routes.draw do
 
   root "homepages#homepage"
 
+  get "/lessons", to: "lessons#all"
+
 end

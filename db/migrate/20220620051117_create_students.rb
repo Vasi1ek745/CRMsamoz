@@ -5,6 +5,9 @@ class CreateStudents < ActiveRecord::Migration[6.1]
       t.string :subject
       t.integer :class_in_school
       t.string :location
+      t.integer :pay_by_hour
+      t.string :other
+      
 
       t.timestamps
     end

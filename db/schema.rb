@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(version: 2022_06_20_052805) do
     t.string "subject"
     t.integer "class_in_school"
     t.string "location"
+    t.integer "pay_by_hour"
+    t.string "other"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

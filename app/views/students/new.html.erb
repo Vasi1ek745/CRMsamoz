@@ -1,2 +1,43 @@
-<h1>Students#new</h1>
-<p>Find me in app/views/students/new.html.erb</p>
+<div>
+	 <%= form_with model: @student do |form| %>
+	<div class="m-2  p-2 border border-2 shadow-2">
+		<h1>New student</h1>
+	</div>	
+	<div class="m-2 mb-0 p-2 border border-2 shadow-2">
+
+		<div class="input-group mb-3">
+		  <span class="input-group-text px-4" id="basic-addon1">Name</span>
+		  <input type="text" class="form-control" placeholder="Name" >
+		</div>
+		<div class="container ms-0"> 
+			<div class="row">
+				<div class="input-group mb-2 p-0" style="width: 25%;">
+				  	<span class="input-group-text px-4" id="basic-addon2">Subject</span>
+					<%= form.select :subject, ["Math", "Physics", "Math+Physics", "Math OGE", "Phys OGE", "Math EGE", "Phys EGE"],{}, class:"form-select" %>
+		  		</div>
+				<div class="input-group mb-2 "style="width: 25%;">
+				  <span class="input-group-text px-4" id="basic-addon2">Class in school</span>
+					<%= form.select :subject, (6..11).to_a , {} , class:"form-select" %>
+				</div>
+			</div>
+			<div class="row"> 
+				<div class="input-group mb-2 p-0" style="width: 25%;">
+				  <span class="input-group-text px-4" id="basic-addon2">Location</span>
+					<%= form.select :subject, ["Online", "Home"], {} , class:"form-select" %>
+				</div>
+				<div class="input-group mb-2 " style="width: 25%;">
+				  <span class="input-group-text mx-4" id="basic-addon2">Pay_by_hour</span>
+				 <%= form.select :subject, [600,700,800,900,1000] , {} , class:"form-select" %>
+				</div>
+			</div>
+		</div>
+		<div class="input-group mb-3">
+				  <span class="input-group-text" id="basic-addon2">Other</span>
+				  <input type="text" class="form-control" >
+		</div>
+	</div>
+		<div class="mx-2  ">
+            <%= form.submit "create!" , class:"mt-3 btn btn-outline-dark btn-lg" %>
+		</div>
+	 <% end %>
+</div>
