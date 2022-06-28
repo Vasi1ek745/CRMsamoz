@@ -1,5 +1,5 @@
 class LessonsController < ApplicationController
-  def all
+  def all_lessons
     @lessons = Lesson.all
 
   end
