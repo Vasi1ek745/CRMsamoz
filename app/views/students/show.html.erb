@@ -1,2 +1,15 @@
-<h1>Students#show</h1>
-<p>Find me in app/views/students/show.html.erb</p>
+<div class="m-4 p-2 border border-2 shadow-2" >
+	 
+	<div class="mb-3">
+		<h2> <%= @student.name %> </h2>
+	</div>
+	<div>
+		<p> Subjecy : <%= @student.subject %></p>
+		<p> Class : <%= @student.class_in_school %></p>
+		<p> Pay_by_hour : <%= @student.pay_by_hour %></p>
+		<p> Location : <%= @student.location %></p>
+		<p> Other : <%= @student.other %></p>
+	</div>
+	
+</div>
+
